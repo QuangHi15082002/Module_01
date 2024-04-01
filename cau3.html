@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau3</title>
+</head>
+<body>
+<script>
+
+    function sumOfListPrime(x) {
+        // Hàm kiểm tra số nguyên tố
+        function isPrime(num) {
+            if (num <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Tính tổng các số nguyên tố từ 0 đến x
+        let sum = 0;
+        for (let i = 0; i <= x; i++) {
+            if (isPrime(i)) {
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
+
+    // Ví dụ về cách sử dụng hàm sumOfListPrime()
+    let x = 10;
+    let result = sumOfListPrime(x);
+    console.log("Tổng các số nguyên tố từ 0 đến " + x + " là: " + result);
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function insertNumberToArray(arr, x, index) {
+        if (index < 0 || index > arr.length) {
+            return arr;
+        }
+
+        var newArr = arr.slice();
+
+        newArr.splice(index, 0, x);
+
+        return newArr;
+    }
+
+
+    var array = [5, 2, 3, 4, 6];
+    var x = 8;
+    var index = 2;
+    var newArray = insertNumberToArray(array, x, index);
+    console.log(`Mảng mới đã được chèn thêm số  ${x}  vào vị trí ${index} : ${newArray}`);
+</script>
+</body>
+</html>

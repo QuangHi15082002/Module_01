@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // Câu 1
+    function findAvg(scores) {
+        var sum = 0;
+        for (let i = 0; i < scores.length; i++) {
+            sum += scores[i];
+        }
+
+        var avg = sum/scores.length;
+        return avg;
+    }
+    var scores = [5,8,6,9,10];
+    var average = findAvg(scores);
+    console.log(`Điểm trung bình là ${average}`  );
+</script>
+</body>
+</html>
